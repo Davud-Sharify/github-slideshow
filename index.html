@@ -1,13 +1,47 @@
----
-layout: presentation
----
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Davud Sharifi">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body class="dark-bckg">
+        <div class="white-box">
+        <img src="imgs/Logo1.svg" alt="Logo">
+    </div>
+    
+    <div class="container-home">
+    <img style="width: 100%;" src="imgs/Hero.png" alt="Hero">
+    <h1 class="h1">Hello There!</h1>
+    <p class="p1">Welcome to my first portfolio, I based it around 
+        a personal style of artworks I used throughout various projects. If you’re interested please select a section below. Have fun :)</p>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item">
+          <a href="#">
+            <img src="imgs/ART.png" alt="ART">
+          </a>
+        </div>
+        <div class="grid-item">
+            <a href="index-cd.html">
+            <img src="imgs/CD.png" alt="CD">
+        </a>
+    </div>
+        <div class="grid-item">
+          <a href="#">
+            <img src="imgs/BRAND.png" alt="BRAND">
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="#">
+            <img src="imgs/POEMS.png" alt="POEMS">
+          </a>
+        </div>
+      </div>
+      
 
-{% for post in site.posts reversed %}
-	{% include slide.html %}
-	<div class="page-break"></div>
-{% endfor %}
-{% unless site.simple-slideshow %}
-{% if site.overview %}
-<section id="overview" class="step" {% for attr in site.overview-data %} data-{{attr[0]}}="{{attr[1]}}"{% endfor %}></section>
-{% endif %}
-{% endunless %}
+</body>
+</html>
